@@ -164,7 +164,7 @@ export default function Navbar() {
               </svg>
             </a>
             <a
-              href="wa.link/4xzc80"
+              href=" https://wa.me/01093758143"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/80 hover:text-white transition-colors"

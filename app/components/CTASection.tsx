@@ -125,11 +125,11 @@ export default function CTASection() {
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-[#BF5AF2] to-[#0A84FF] transition-transform duration-500 group-hover:scale-[1.1]" />
                 <div className="absolute inset-0 bg-gradient-to-r from-[#0A84FF] to-[#BF5AF2] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                <span className="relative text-white font-medium">
+                <span className="relative text-white font-medium z-10">
                   Book a Demo
                 </span>
                 <svg
-                  className="relative w-5 h-5 text-white transition-transform duration-500 group-hover:translate-x-1"
+                  className="relative w-5 h-5 text-white transition-transform duration-500 group-hover:translate-x-1 z-10"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -142,17 +142,27 @@ export default function CTASection() {
                   />
                 </svg>
               </Link>
-              <motion.button
-                initial={{ x: 20, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 1 }}
-                whileHover={{ scale: 1.05 }}
-                   
-                className="px-8 py-3 rounded-full bg-transparent border border-[#0A84FF] text-white font-medium hover:bg-[#0A84FF]/10 transition-colors"
+              <a
+                href="https://wa.me/01093758143"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3 rounded-full bg-transparent border border-[#0A84FF] text-white font-medium hover:bg-[#0A84FF]/10 transition-colors inline-flex items-center gap-2"
               >
-                Build Website →
-                
-              </motion.button>
+                Build Website
+                <svg
+                  className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </a>
             </div>
           </motion.div>
         </div>

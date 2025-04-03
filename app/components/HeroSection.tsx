@@ -44,7 +44,7 @@ export default function HeroSection() {
             className="flex items-center justify-center gap-6 flex-wrap"
           >
             <a
-              href="wa.link/4xzc80"
+              href="https://wa.me/01093758143"
               target="_blank"
               rel="noopener noreferrer"
               className="relative inline-flex items-center gap-2 px-8 py-4 rounded-full overflow-hidden group"

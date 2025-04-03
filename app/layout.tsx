@@ -13,8 +13,11 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'Modern Portfolio',
-  description: 'A modern portfolio showcasing web development expertise',
+  title: 'Mohamed Abdelrahman | Portfolio',
+  description: 'Full Stack Web Developer Portfolio',
+  icons: {
+    icon: '/head.jpg',
+  },
 }
 
 export default function RootLayout({
