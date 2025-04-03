@@ -40,26 +40,33 @@ export default function ProjectsSection() {
           100% { background-position: 0% 50%; }
         }
 
-        .animated-border {
+        .project-card {
           position: relative;
           background: linear-gradient(90deg, #BF5AF2, #0A84FF, #BF5AF2);
           background-size: 200% 100%;
           animation: borderAnimation 8s linear infinite;
           padding: 1px;
+          border-radius: 1rem;
+          transition: all 0.3s ease;
         }
 
-        .animated-border::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background: inherit;
-          filter: blur(8px);
-          opacity: 0;
-          transition: opacity 0.3s ease;
+        .project-card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 10px 20px rgba(191, 90, 242, 0.2);
         }
 
-        .animated-border:hover::before {
-          opacity: 0.5;
+        .project-content {
+          background: rgba(5, 5, 5, 0.95);
+          border-radius: 1rem;
+          height: 100%;
+        }
+
+        .project-image {
+          transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image {
+          transform: scale(1.1);
         }
       `}</style>
 
@@ -83,7 +90,7 @@ export default function ProjectsSection() {
           <span className="gradient-text !important">Projects</span>
         </motion.h2>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -91,9 +98,9 @@ export default function ProjectsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="animated-border rounded-xl group max-w-sm mx-auto"
+              className="project-card max-w-sm mx-auto"
             >
-              <div className="bg-[#050505]/95 rounded-xl overflow-hidden">
+              <div className="project-content">
                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
                   <div className="relative h-40 overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
@@ -102,11 +109,11 @@ export default function ProjectsSection() {
                       alt={project.title}
                       width={320}
                       height={180}
-                      className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
+                      className="project-image w-full h-full object-cover"
                     />
                   </div>
                   <div className="p-5">
-                    <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#BF5AF2] transition-colors line-clamp-1">
+                    <h3 className="text-lg font-semibold text-white mb-2 line-clamp-1">
                       {project.title}
                     </h3>
                     <p className="text-white/70 mb-3 text-sm line-clamp-2">

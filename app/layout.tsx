@@ -13,8 +13,8 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'Mohamed Abdelrahman | Portfolio',
-  description: 'Full Stack Web Developer Portfolio',
+  title: 'Mohad Mohamed | Portfolio',
+  description: 'Personal portfolio website showcasing my work and skills',
   icons: {
     icon: '/head.jpg',
   },
