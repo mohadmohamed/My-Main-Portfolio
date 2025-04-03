@@ -63,10 +63,13 @@ export default function ProjectsSection() {
 
         .project-image {
           transition: transform 0.5s ease;
+          border-radius: 0.75rem;
+          border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .project-card:hover .project-image {
           transform: scale(1.1);
+          border-color: rgba(191, 90, 242, 0.3);
         }
       `}</style>
 
@@ -102,7 +105,7 @@ export default function ProjectsSection() {
             >
               <div className="project-content">
                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
-                  <div className="relative h-40 overflow-hidden">
+                  <div className="relative h-40 overflow-hidden rounded-xl">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
                     <Image
                       src={project.image}

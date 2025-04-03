@@ -31,11 +31,11 @@ export default function Home() {
         }
       `}</style>
 
-      <main className="min-h-screen pt-32">
+      <main className="min-h-screen pt-20 sm:pt-32 mt-8 sm:mt-16">
         <Navbar />
         
         {/* Hero Section */}
-        <section className="h-[85vh] relative flex items-center justify-center overflow-hidden">
+        <section className="min-h-[600px] h-[75vh] sm:h-[85vh] relative flex items-center justify-center overflow-hidden">
           {/* Dark blurry background */}
           <div className="absolute inset-0 z-0">
             <div className="absolute inset-0 bg-[#050505]/80 backdrop-blur-xl" />
@@ -53,7 +53,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-5xl md:text-7xl font-bold mb-4"
+              className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4"
             >
               <span className="gradient-text !important">
                 Empowering Web Development
@@ -66,10 +66,11 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl text-white/80 mb-8 max-w-2xl mx-auto"
+              className="text-lg sm:text-xl text-white/80 mb-8 max-w-2xl mx-auto"
             >
- Building modern, responsive, and user-friendly web applications
- with cutting-edge technologies and creative solutions.            </motion.p>
+              Building modern, responsive, and user-friendly web applications
+              with cutting-edge technologies and creative solutions.
+            </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
