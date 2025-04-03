@@ -155,7 +155,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-white font-medium">WhatsApp</h4>
-                    <a href=" https://wa.me/01093758143" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white/80 transition-colors">Click to chat</a>
+                    <a href="https://wa.me/+201093758143" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white/80 transition-colors">Click to chat</a>
                   </div>
                 </div>
               </div>

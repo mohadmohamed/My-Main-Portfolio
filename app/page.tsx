@@ -78,12 +78,14 @@ export default function Home() {
               className="flex flex-col sm:flex-row items-center justify-center gap-4"
             >
               <button className="w-auto px-8 py-3 rounded-full bg-white text-black font-medium hover:bg-white/90 transition-colors">
-                <a href="https://www.upwork.com/freelancers/~017b1b76aed76cf690">
+                <a href="https://www.upwork.com/freelancers/~017b1b76aed76cf690" target="_blank" rel="noopener noreferrer">
                   View My Work →
                 </a>
               </button>
               <a 
                 href="https://wa.me/+201093758143"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-auto group relative inline-flex items-center px-8 py-3 rounded-full overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-[#ff00ff]/75 via-[#00ffff]/75 to-[#ffff00]/75 opacity-90 animate-gradient bg-[length:300%_100%]"></div>

@@ -33,7 +33,37 @@ const projects = [
 export default function ProjectsSection() {
   return (
     <section id="projects" className="py-32 relative overflow-hidden bg-[#050505]">
-      {/* Enhanced gradient background effect */}
+      <style jsx global>{`
+        @keyframes borderAnimation {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+
+        .animated-border {
+          position: relative;
+          background: linear-gradient(90deg, #BF5AF2, #0A84FF, #BF5AF2);
+          background-size: 200% 100%;
+          animation: borderAnimation 8s linear infinite;
+          padding: 1px;
+        }
+
+        .animated-border::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: inherit;
+          filter: blur(8px);
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .animated-border:hover::before {
+          opacity: 0.5;
+        }
+      `}</style>
+
+      {/* Background gradients */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 opacity-25 bg-[radial-gradient(circle_at_70%_30%,_#0A84FF_0%,_transparent_40%)]" />
         <div className="absolute inset-0 opacity-25 bg-[radial-gradient(circle_at_20%_60%,_#BF5AF2_0%,_transparent_40%)]" />
@@ -61,38 +91,40 @@ export default function ProjectsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 group hover:border-[#BF5AF2]/50 transition-all duration-300 max-w-sm mx-auto"
+              className="animated-border rounded-xl group max-w-sm mx-auto"
             >
-              <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
-                <div className="relative h-40 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={320}
-                    height={180}
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-5">
-                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#BF5AF2] transition-colors line-clamp-1">
-                    {project.title}
-                  </h3>
-                  <p className="text-white/70 mb-3 text-sm line-clamp-2">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {project.skills.map((skill, skillIndex) => (
-                      <span
-                        key={skillIndex}
-                        className="px-2 py-0.5 text-xs font-medium text-white/80 bg-white/5 rounded-full border border-white/10"
-                      >
-                        {skill}
-                      </span>
-                    ))}
+              <div className="bg-[#050505]/95 rounded-xl overflow-hidden">
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+                  <div className="relative h-40 overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      width={320}
+                      height={180}
+                      className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
+                    />
                   </div>
-                </div>
-              </a>
+                  <div className="p-5">
+                    <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#BF5AF2] transition-colors line-clamp-1">
+                      {project.title}
+                    </h3>
+                    <p className="text-white/70 mb-3 text-sm line-clamp-2">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {project.skills.map((skill, skillIndex) => (
+                        <span
+                          key={skillIndex}
+                          className="px-2 py-0.5 text-xs font-medium text-white/80 bg-white/5 rounded-full border border-white/10"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </a>
+              </div>
             </motion.div>
           ))}
         </div>
