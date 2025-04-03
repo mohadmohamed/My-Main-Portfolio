@@ -76,11 +76,11 @@ export default function Navbar() {
           right: 0;
           bottom: 0;
           width: 100%;
-          max-width: 300px;
+          max-width: 250px;
           background: rgba(10, 10, 15, 0.95);
           backdrop-filter: blur(10px);
           z-index: 60;
-          padding: 6rem 2rem 2rem;
+          padding: 4rem 1.5rem 2rem;
           transform: translateX(100%);
           transition: transform 0.3s ease-in-out;
         }
@@ -221,37 +221,49 @@ export default function Navbar() {
       </header>
 
       {/* Mobile Menu */}
-      <div className={`fixed inset-y-0 right-0 transform w-full max-w-sm bg-[#0A0A0F]/95 backdrop-blur-xl z-50 transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'} lg:hidden`}>
-        <div className="flex flex-col h-full pt-20 px-6">
+      <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
+        <div className="flex flex-col h-full items-center">
+          <div className="flex flex-col items-center mb-6">
+            <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-white/10">
+              <img 
+                src="/head.jpg" 
+                alt="Mohad Mohamed" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h3 className="text-white text-lg font-semibold mt-3 text-center">Mohad Mohamed</h3>
+          </div>
+          
           <Link
             href="/"
-            className="text-white/90 hover:text-white transition-colors text-lg py-3"
+            className="text-white/90 hover:text-white transition-colors text-lg py-3 text-center w-auto"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Home
           </Link>
           <Link
             href="#about"
-            className="text-white/90 hover:text-white transition-colors text-lg py-3"
+            className="text-white/90 hover:text-white transition-colors text-lg py-3 text-center w-auto"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             About
           </Link>
           <Link
             href="#projects"
-            className="text-white/90 hover:text-white transition-colors text-lg py-3"
+            className="text-white/90 hover:text-white transition-colors text-lg py-3 text-center w-auto"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Projects
           </Link>
           <Link
             href="#contact"
-            className="text-white/90 hover:text-white transition-colors text-lg py-3"
+            className="text-white/90 hover:text-white transition-colors text-lg py-3 text-center w-auto"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Contact
           </Link>
-          <div className="mt-8 flex flex-wrap gap-6">
+
+          <div className="flex gap-4 mt-6 justify-center">
             <a
               href="https://github.com/mohadmohamed"
               target="_blank"

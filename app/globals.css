@@ -22,9 +22,17 @@ html {
 }
 
 :root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
 }
 
 body {
@@ -36,8 +44,32 @@ body {
   );
 }
 
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  animation: gradientFlow 8s ease infinite;
+}
+
+/* Override any existing gradient text styles */
+*[class*="gradient-text"],
+*[class*="purple-gradient-text"] {
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+  animation: gradientFlow 8s ease infinite !important;
+  background-size: 300% 100% !important;
+}
+
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-neon-pink via-neon-purple to-neon-blue;
+  background-image: linear-gradient(90deg, #ff00ff, #00ffff, #ffff00) !important;
+}
+
+.purple-gradient-text {
+  background-image: linear-gradient(90deg, #8a2be2, #ff00ff, #da70d6) !important;
 }
 
 .glow-button {
@@ -52,5 +84,5 @@ body {
 }
 
 .section-title {
-  @apply text-4xl md:text-5xl font-display font-bold mb-6 gradient-text;
+  @apply text-4xl md:text-5xl font-display font-bold mb-6;
 } 

@@ -22,9 +22,7 @@ export default function HeroSection() {
             className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
           >
             <span className="text-white">Empowering </span>
-            <span className="animated-gradient-text">
-              Web Development
-            </span>
+            <span className="gradient-text">Web Development</span>
           </motion.h1>
 
           <motion.p
@@ -44,18 +42,18 @@ export default function HeroSection() {
             className="flex items-center justify-center gap-6 flex-wrap"
           >
             <a
-              href="https://wa.me/01093758143"
+              href="https://wa.me/+201093758143"
               target="_blank"
               rel="noopener noreferrer"
               className="relative inline-flex items-center gap-2 px-8 py-4 rounded-full overflow-hidden group"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-[#BF5AF2] to-[#0A84FF] transition-transform duration-500 group-hover:scale-[1.1]" />
               <div className="absolute inset-0 bg-gradient-to-r from-[#0A84FF] to-[#BF5AF2] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-              <span className="relative text-white font-medium">
+              <span className="relative text-white font-medium z-10">
                 Build Website
               </span>
               <svg
-                className="relative w-5 h-5 text-white transition-transform duration-500 group-hover:translate-x-1"
+                className="relative w-5 h-5 text-white transition-transform duration-500 group-hover:translate-x-1 z-10"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -75,9 +73,9 @@ export default function HeroSection() {
               rel="noopener noreferrer"
               className="relative inline-flex items-center gap-2 px-8 py-4 rounded-full overflow-hidden group bg-white/10 hover:bg-white/20 transition-colors"
             >
-              <span className="text-white font-medium">View My Work</span>
+              <span className="relative text-white font-medium z-10">View My Work</span>
               <svg
-                className="w-5 h-5 text-white transition-transform duration-500 group-hover:translate-x-1"
+                className="w-5 h-5 text-white transition-transform duration-500 group-hover:translate-x-1 z-10"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

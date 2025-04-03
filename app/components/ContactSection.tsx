@@ -97,7 +97,7 @@ export default function ContactSection() {
                 className="text-5xl font-bold mb-8"
               >
                 <span className="text-white">Get in </span>
-                <span className="animated-gradient-text">
+                <span className="gradient-text !important">
                   Touch
                 </span>
               </motion.h2>
@@ -211,9 +211,13 @@ export default function ContactSection() {
                   disabled={isSubmitting}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full px-8 py-4 rounded-lg bg-gradient-to-r from-[#BF5AF2] to-[#0A84FF] text-white font-medium hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="relative w-auto mx-auto px-8 py-4 rounded-lg overflow-hidden group disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#ff00ff]/75 via-[#00ffff]/75 to-[#ffff00]/75 opacity-90 animate-gradient bg-[length:300%_100%]"></div>
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors duration-500"></div>
+                  <span className="relative z-10 text-white font-medium whitespace-nowrap">
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                  </span>
                 </motion.button>
 
                 {/* Status Messages */}

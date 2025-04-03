@@ -32,128 +32,101 @@ const projects = [
 
 export default function ProjectsSection() {
   return (
-    <>
-      <style jsx global>{`
-        .animated-gradient-text {
-          background: linear-gradient(90deg, #BF5AF2, #0A84FF, #BF5AF2);
-          -webkit-background-clip: text;
-          background-clip: text;
-          color: transparent;
-          animation: gradientFlow 8s ease infinite;
-          background-size: 300% 100%;
-        }
+    <section id="projects" className="py-32 relative overflow-hidden bg-[#050505]">
+      {/* Enhanced gradient background effect */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 opacity-25 bg-[radial-gradient(circle_at_70%_30%,_#0A84FF_0%,_transparent_40%)]" />
+        <div className="absolute inset-0 opacity-25 bg-[radial-gradient(circle_at_20%_60%,_#BF5AF2_0%,_transparent_40%)]" />
+        <div className="absolute inset-0 opacity-15 bg-[radial-gradient(circle_at_50%_70%,_#0A84FF_0%,_transparent_50%)]" />
+        <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-[#050505] to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#050505] to-transparent" />
+      </div>
 
-        @keyframes gradientFlow {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-      `}</style>
-
-      <section id="projects" className="py-32 relative overflow-hidden bg-[#050505]">
-        {/* Enhanced gradient background effect */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 opacity-25 bg-[radial-gradient(circle_at_70%_30%,_#0A84FF_0%,_transparent_40%)]" />
-          <div className="absolute inset-0 opacity-25 bg-[radial-gradient(circle_at_20%_60%,_#BF5AF2_0%,_transparent_40%)]" />
-          <div className="absolute inset-0 opacity-15 bg-[radial-gradient(circle_at_50%_70%,_#0A84FF_0%,_transparent_50%)]" />
-          <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-[#050505] to-transparent" />
-          <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#050505] to-transparent" />
-        </div>
-
-        <div className="max-w-6xl mx-auto px-4 relative">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-5xl font-bold mb-6">
-              <span className="text-white">Featured </span>
-              <span className="animated-gradient-text">
-                Projects
-              </span>
-            </h2>
-            <p className="text-white/80 text-xl max-w-3xl mx-auto">
-              Explore some of my recent work showcasing my expertise in web development.
-            </p>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
-              <motion.div
-                key={project.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 group hover:border-[#BF5AF2]/50 transition-all duration-300 max-w-sm mx-auto"
-              >
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
-                  <div className="relative h-40 overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      width={320}
-                      height={180}
-                      className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#BF5AF2] transition-colors line-clamp-1">
-                      {project.title}
-                    </h3>
-                    <p className="text-white/70 mb-3 text-sm line-clamp-2">
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {project.skills.map((skill, skillIndex) => (
-                        <span
-                          key={skillIndex}
-                          className="px-2 py-0.5 text-xs font-medium text-white/80 bg-white/5 rounded-full border border-white/10"
-                        >
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </a>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            className="mt-12 text-center"
-          >
-            <a
-              href="https://www.upwork.com/freelancers/~017b1b76aed76cf690"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white/5 hover:bg-white/10 transition-colors text-white font-medium group"
+      <div className="max-w-6xl mx-auto px-4 relative">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl md:text-5xl font-bold mb-12 text-center"
+        >
+          <span className="text-white">Featured </span>
+          <span className="gradient-text !important">Projects</span>
+        </motion.h2>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              className="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 group hover:border-[#BF5AF2]/50 transition-all duration-300 max-w-sm mx-auto"
             >
-              More Projects
-              <svg
-                className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-1"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                />
-              </svg>
-            </a>
-          </motion.div>
+              <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+                <div className="relative h-40 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={320}
+                    height={180}
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#BF5AF2] transition-colors line-clamp-1">
+                    {project.title}
+                  </h3>
+                  <p className="text-white/70 mb-3 text-sm line-clamp-2">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {project.skills.map((skill, skillIndex) => (
+                      <span
+                        key={skillIndex}
+                        className="px-2 py-0.5 text-xs font-medium text-white/80 bg-white/5 rounded-full border border-white/10"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </a>
+            </motion.div>
+          ))}
         </div>
-      </section>
-    </>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="mt-12 text-center"
+        >
+          <a
+            href="https://www.upwork.com/freelancers/~017b1b76aed76cf690"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white/5 hover:bg-white/10 transition-colors text-white font-medium group"
+          >
+            More Projects
+            <svg
+              className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+              />
+            </svg>
+          </a>
+        </motion.div>
+      </div>
+    </section>
   );
 } 

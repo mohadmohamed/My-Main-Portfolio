@@ -55,7 +55,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="text-5xl md:text-7xl font-bold mb-4"
             >
-              <span className="animated-gradient-text">
+              <span className="gradient-text !important">
                 Empowering Web Development
               </span>
               <br />
@@ -68,21 +68,28 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl text-white/80 mb-8 max-w-2xl mx-auto"
             >
-              Crafting intuitive, cutting-edge digital experiences that transform ideas into reality
-            </motion.p>
+ Building modern, responsive, and user-friendly web applications
+ with cutting-edge technologies and creative solutions.            </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
+              className="flex flex-col sm:flex-row items-center justify-center gap-4"
             >
-              <button className="px-8 py-3 rounded-full bg-white text-black font-medium hover:bg-white/90 transition-colors">
-                View My Work →
+              <button className="w-auto px-8 py-3 rounded-full bg-white text-black font-medium hover:bg-white/90 transition-colors">
+                <a href="https://www.upwork.com/freelancers/~017b1b76aed76cf690">
+                  View My Work →
+                </a>
               </button>
-              <button className="px-8 py-3 rounded-full bg-transparent border border-[#0A84FF] text-white font-medium hover:bg-[#0A84FF]/10 transition-colors">
-                Contact Me
-              </button>
+              <a 
+                href="https://wa.me/+201093758143"
+                className="w-auto group relative inline-flex items-center px-8 py-3 rounded-full overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-[#ff00ff]/75 via-[#00ffff]/75 to-[#ffff00]/75 opacity-90 animate-gradient bg-[length:300%_100%]"></div>
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors duration-500"></div>
+                <span className="relative font-medium text-white z-10">Contact Me</span>
+              </a>
             </motion.div>
           </div>
         </section>
