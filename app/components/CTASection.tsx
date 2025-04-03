@@ -100,10 +100,10 @@ export default function CTASection() {
             </span>
           </motion.h2>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center w-full">
             <Link
               href="#contact"
-              className="w-auto group relative inline-flex items-center px-8 py-4 rounded-full overflow-hidden"
+              className="w-full sm:w-auto group relative inline-flex items-center justify-center px-8 py-4 rounded-full overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-[#ff00ff]/75 via-[#00ffff]/75 to-[#ffff00]/75 transition-transform duration-500 group-hover:scale-[1.1] opacity-90 animate-gradient bg-[length:300%_100%]"></div>
               <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors duration-500"></div>
@@ -111,7 +111,7 @@ export default function CTASection() {
                 Book a Demo
               </span>
               <svg
-                className="relative w-5 h-5 text-white transition-transform duration-500 group-hover:translate-x-1 z-10"
+                className="relative w-5 h-5 ml-2 text-white transition-transform duration-500 group-hover:translate-x-1 z-10"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -128,7 +128,7 @@ export default function CTASection() {
               href="https://wa.me/+201093758143"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-auto inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full bg-white text-black font-medium hover:bg-white/90 transition-all duration-300 group"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full bg-white text-black font-medium hover:bg-white/90 transition-all duration-300 group"
             >
               <span>Build Website</span>
               <svg
