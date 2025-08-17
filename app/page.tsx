@@ -29,6 +29,12 @@ export default function Home() {
           50% { background-position: 100% 50%; }
           100% { background-position: 0% 50%; }
         }
+
+        .animated-gradient-bg {
+          background: linear-gradient(90deg, #BF5AF2, #0A84FF, #8B5CF6, #3B82F6, #6366F1, #BF5AF2);
+          background-size: 600% 100%;
+          animation: gradientFlow 15s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+        }
       `}</style>
 
       <main className="min-h-screen pt-20 sm:pt-32 mt-8 sm:mt-16">
@@ -87,10 +93,8 @@ export default function Home() {
                 href="https://wa.me/+201093758143"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-auto group relative inline-flex items-center px-8 py-3 rounded-full overflow-hidden"
+                className="w-auto group relative inline-flex items-center px-8 py-3 rounded-full overflow-hidden animated-gradient-bg hover:scale-105 hover:shadow-lg hover:shadow-[#BF5AF2]/25 transition-all duration-300 transform"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-[#ff00ff]/75 via-[#00ffff]/75 to-[#ffff00]/75 opacity-90 animate-gradient bg-[length:300%_100%]"></div>
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors duration-500"></div>
                 <span className="relative font-medium text-white z-10">Contact Me</span>
               </a>
             </motion.div>

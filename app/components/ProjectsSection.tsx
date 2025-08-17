@@ -27,6 +27,14 @@ const projects = [
     skills: ["HTML", "CSS"],
     link: "https://mohadmohamed.github.io/My-Portfolio/My%20Portfolio%20HTML%2BCSS/portfolio.html",
     image: "/projects/portfolio.jpg"
+  },
+  {
+    id: 4,
+    title: "My Portfolio Responsive Website",
+    description: "A personal portfolio website showcasing my work, skills, and experience with a clean, modern design.",
+    skills: ["HTML", "CSS"],
+    link: "https://mohadmohamed.github.io/My-Portfolio/My%20Portfolio%20HTML%2BCSS/portfolio.html",
+    image: "/projects/portfolio.jpg"
   }
 ];
 
