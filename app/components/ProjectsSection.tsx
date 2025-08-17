@@ -22,20 +22,13 @@ const projects = [
   },
   {
     id: 3,
-    title: "My Portfolio Responsive Website",
-    description: "A personal portfolio website showcasing my work, skills, and experience with a clean, modern design.",
-    skills: ["HTML", "CSS"],
-    link: "https://mohadmohamed.github.io/My-Portfolio/My%20Portfolio%20HTML%2BCSS/portfolio.html",
-    image: "/projects/portfolio.jpg"
-  },
-  {
-    id: 4,
-    title: "My Portfolio Responsive Website",
-    description: "A personal portfolio website showcasing my work, skills, and experience with a clean, modern design.",
-    skills: ["HTML", "CSS"],
-    link: "https://mohadmohamed.github.io/My-Portfolio/My%20Portfolio%20HTML%2BCSS/portfolio.html",
-    image: "/projects/portfolio.jpg"
+    title: "Help Desk Hotline Website",
+    description: "A website for a help desk hotline company that provides 24/7 support for businesses and individuals.",
+    skills: ["HTML", "CSS","javascript","wordpress"],
+    link: "https://helpdeskhotline.ca/",
+    image: "/projects/help_desk.jpg"
   }
+  
 ];
 
 export default function ProjectsSection() {
@@ -155,7 +148,7 @@ export default function ProjectsSection() {
           className="mt-12 text-center"
         >
           <a
-            href="https://www.upwork.com/freelancers/~017b1b76aed76cf690"
+            href="https://drive.google.com/file/d/1nNOInhwmi8vhwKdagQ-tOs-gRpik3mK9/view"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white/5 hover:bg-white/10 transition-colors text-white font-medium group"

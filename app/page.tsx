@@ -8,6 +8,7 @@ import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
 import CTASection from '@/app/components/CTASection';
 import Navbar from '@/app/components/Navbar';
+import GoToTop from '@/app/components/GoToTop';
 
 export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
@@ -30,18 +31,18 @@ export default function Home() {
           100% { background-position: 0% 50%; }
         }
 
-        .animated-gradient-bg {
-          background: linear-gradient(90deg, #BF5AF2, #0A84FF, #8B5CF6, #3B82F6, #6366F1, #BF5AF2);
-          background-size: 600% 100%;
-          animation: gradientFlow 15s cubic-bezier(0.45, 0, 0.55, 1) infinite;
-        }
+                                   .animated-gradient-bg {
+            background: linear-gradient(90deg, #BF5AF2, #0A84FF, #8B5CF6, #3B82F6, #6366F1, #BF5AF2);
+            background-size: 600% 100%;
+            animation: gradientFlow 15s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+          }
       `}</style>
 
       <main className="min-h-screen pt-20 sm:pt-32 mt-8 sm:mt-16">
         <Navbar />
         
         {/* Hero Section */}
-        <section className="min-h-[600px] h-[75vh] sm:h-[85vh] relative flex items-center justify-center overflow-hidden">
+        <section id="home" className="min-h-[600px] h-[75vh] sm:h-[85vh] relative flex items-center justify-center overflow-hidden">
           {/* Dark blurry background */}
           <div className="absolute inset-0 z-0">
             <div className="absolute inset-0 bg-[#050505]/80 backdrop-blur-xl" />
@@ -89,14 +90,14 @@ export default function Home() {
                   View My Work →
                 </a>
               </button>
-              <a 
-                href="https://wa.me/+201093758143"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-auto group relative inline-flex items-center px-8 py-3 rounded-full overflow-hidden animated-gradient-bg hover:scale-105 hover:shadow-lg hover:shadow-[#BF5AF2]/25 transition-all duration-300 transform"
-              >
-                <span className="relative font-medium text-white z-10">Contact Me</span>
-              </a>
+                             <a 
+                 href="https://wa.me/+201093758143"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="w-auto group relative inline-flex items-center px-8 py-3 rounded-full overflow-hidden animated-gradient-bg hover:scale-105 hover:shadow-lg hover:shadow-[#BF5AF2]/25 transition-all duration-300 transform"
+               >
+                 <span className="relative font-medium text-white z-10">Contact Me</span>
+               </a>
             </motion.div>
           </div>
         </section>
@@ -113,6 +114,9 @@ export default function Home() {
         {/* Contact Section */}
         <ContactSection />
       </main>
+      
+      {/* Go to Top Button */}
+      <GoToTop />
     </>
   );
 } 

@@ -12,9 +12,13 @@
     const smoothScrollTo = (sectionId: string) => {
       const element = document.getElementById(sectionId);
       if (element) {
-        element.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
+        const offset = 120; // Offset for navbar height
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
         });
       }
     };
@@ -141,19 +145,22 @@
                   className="w-full h-full object-cover"
                 />
               </div>
-              <span className="text-base sm:text-xl font-semibold text-white">Mohad Mohamed</span>
+              <span className="text-base sm:text-xl font-bold text-white tracking-wide" style={{ fontFamily: 'Inter, system-ui, -apple-system, sans-serif' }}>Mohad Mohamed</span>
             </Link>
 
             {/* Desktop Navigation Links */}
             <div className="hidden lg:flex items-center gap-8">
-              <Link href="/" className="text-white/90 hover:text-white transition-colors">
-                Home
-              </Link>
               <button 
                 onClick={() => smoothScrollTo('about')}
                 className="text-white/90 hover:text-white transition-colors cursor-pointer"
               >
                 About
+              </button>
+              <button 
+                onClick={() => smoothScrollTo('skills')}
+                className="text-white/90 hover:text-white transition-colors cursor-pointer"
+              >
+                Skills
               </button>
               <button 
                 onClick={() => smoothScrollTo('projects')}
@@ -211,7 +218,7 @@
               </a>
               <Link
                 href="tel:+201093758143"
-                className="ml-4 px-6 py-2 rounded-full bg-white text-black font-medium hover:bg-white/90 transition-colors"
+                className="ml-2 px-6 py-2 rounded-full bg-white text-black font-medium hover:bg-white/90 transition-colors"
               >
                 Call Me
               </Link>
@@ -219,9 +226,9 @@
                 href="https://drive.google.com/file/d/1nNOInhwmi8vhwKdagQ-tOs-gRpik3mK9/view"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-1 px-6 py-2 rounded-full animated-gradient-bg text-white font-medium hover:scale-105 hover:shadow-lg hover:shadow-[#BF5AF2]/25 transition-all duration-300 transform"
+                className="ml-2 px-6 py-2 rounded-full animated-gradient-bg text-white font-medium hover:scale-105 hover:shadow-lg hover:shadow-[#BF5AF2]/25 transition-all duration-300 transform"
               >
-                Resume
+                My Resume
               </a>
             </div>
 
@@ -280,16 +287,9 @@
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <h3 className="text-base sm:text-lg font-semibold mt-3 text-center text-white">Mohad Mohamed</h3>
+                    <h3 className="text-base sm:text-lg font-bold mt-3 text-center text-white tracking-wide" style={{ fontFamily: 'Inter, system-ui, -apple-system, sans-serif' }}>Mohad Mohamed</h3>
                   </div>
                   
-                  <Link
-                    href="/"
-                    className="text-base sm:text-lg text-white/90 hover:text-white transition-colors py-3 text-center w-auto"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Home
-                  </Link>
                   <button
                     onClick={() => {
                       smoothScrollTo('about');
@@ -298,6 +298,15 @@
                     className="text-base sm:text-lg text-white/90 hover:text-white transition-colors py-3 text-center w-auto cursor-pointer"
                   >
                     About
+                  </button>
+                  <button
+                    onClick={() => {
+                      smoothScrollTo('skills');
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className="text-base sm:text-lg text-white/90 hover:text-white transition-colors py-3 text-center w-auto cursor-pointer"
+                  >
+                    Skills
                   </button>
                   <button
                     onClick={() => {
