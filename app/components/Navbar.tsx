@@ -223,7 +223,7 @@
                 Call Me
               </Link>
               <a
-                href="https://drive.google.com/file/d/1nNOInhwmi8vhwKdagQ-tOs-gRpik3mK9/view"
+                href="https://drive.google.com/file/d/1Fbhdnh3EZ8JP3N1a_bssJA8-Vx8V-YPb/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ml-2 px-6 py-2 rounded-full animated-gradient-bg text-white font-medium hover:scale-105 hover:shadow-lg hover:shadow-[#BF5AF2]/25 transition-all duration-300 transform"
