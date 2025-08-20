@@ -148,7 +148,7 @@ export default function ProjectsSection() {
           className="mt-12 text-center"
         >
           <a
-            href="https://drive.google.com/file/d/1nNOInhwmi8vhwKdagQ-tOs-gRpik3mK9/view"
+            href="https://drive.google.com/file/d/1Fbhdnh3EZ8JP3N1a_bssJA8-Vx8V-YPb/view"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white/5 hover:bg-white/10 transition-colors text-white font-medium group"
