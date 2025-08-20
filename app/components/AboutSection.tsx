@@ -6,11 +6,11 @@ import Image from 'next/image';
 export default function AboutSection() {
   const skills = [
     { name: 'Web Development', level: 97 },
-    { name: 'UI/UX Design', level: 85 },
+    { name: 'UI/UX Design', level: 90 },
     { name: '.NET', level: 95 },
     { name: 'Problem Solving', level: 88 },
-    { name: 'Networking', level: 82 },
-    { name: 'Database', level: 80 },
+    { name: 'Networking', level: 87 },
+    { name: 'Database', level: 90 },
   ];
 
   return (
@@ -75,19 +75,19 @@ export default function AboutSection() {
               className="lg:w-2/3 text-center lg:text-left"
             >
               <h3 className="text-3xl font-bold text-white mb-6">
-                Communications & Software Developer
+                Computer & Communications Engineer
               </h3>
               
               <p className="text-white/80 text-lg mb-4">
-                I'm a Computer & Communications Engineering student at Benha University, specializing in web development and user-focused digital solutions.
+                3rd Computer & Communications Engineering student at Benha University,  passionate about creating impactful solutions at the intersection of telecommunications and software development.
               </p>
 
               <p className="text-white/80 text-lg mb-4">
-                Through professional courses, traineeships, and hands-on projects, I've built a strong foundation in creating modern, responsive, and high-performing websites. As a leader in the IEEE Web Team, I guided members in delivering collaborative web projects, and I've also developed websites for international clients, ensuring clean design, smooth functionality, and great user experience.
+               Through courses, projects, and leadership in the IEEE Web Team, I’ve gained experience building modern, responsive websites and delivering solutions for international clients with a great focus on user experience.
               </p>
 
               <p className="text-white/80 text-lg mb-6">
-                I'm passionate about transforming ideas into professional, functional websites that help businesses grow. My goal is to deliver reliable, innovative solutions that make a real impact.
+                I’m focused on transforming ideas into reliable, innovative digital products by combining creativity with technical expertise, ensuring they deliver real value and make a lasting impact.
               </p>
 
               {/* Social Links */}
@@ -129,7 +129,7 @@ export default function AboutSection() {
            >
             <div className="text-center">
               <h4 className="text-2xl font-bold text-white mb-2">Skills & Technologies</h4>
-              <p className="text-white/60">I specialize in Html, Css, JavaScript, Php, Wordpress, and emerging AI technologies, constantly pushing the boundaries of what's possible in web development.</p>
+              <p className="text-white/60">I specialize in software development, communications, and emerging AI technologies, constantly exploring innovative solutions and pushing the boundaries of what’s possible across digital platforms.</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
